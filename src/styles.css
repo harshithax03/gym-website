@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
-
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+:root{
+    --inter: "Inter" , "sans-serif";
+    --poppins: "Poppins", "sans-serif";
+    --purple: #9477fc;
+    --seaGreen: #bcec61;
+    --white: #f6f6f2;
+    --black : #191919;
+    --grey : #838181;
+  }
 body{
     font-family: "Poppins", "sans=serif";
+    background-color: var(--white);
+    color: var(--black);
 }
