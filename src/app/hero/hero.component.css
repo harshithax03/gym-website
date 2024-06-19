@@ -1,0 +1,49 @@
+.hero{
+    position: relative;
+    padding: 2rem 2rem;
+    display: flex;
+    gap: 5rem;
+}
+/* .hero-text{
+    background-color: var(--purple);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+} */
+h2{
+    margin: 0;
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: var(--inter);
+}
+.gradient1, .gradient2{
+    height: 12rem;
+    width: 25rem;
+    border-radius: 20rem;
+    filter: blur(90px);
+    position: absolute;
+    z-index: -1;
+}
+button{
+    all: unset;
+    background-color: var(--purple);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+.gradient1{
+    background-color: var(--seaGreen);
+    top: 4rem;
+}
+.gradient2{
+    bottom: 4rem;
+    right: 2rem;
+    background-color: var(--purple);
+}
+.hero-img{
+    background-image: url("../../assets/images/1.png");
+    height: 30rem;
+    width: 50rem;
+    background-position: center;
+    background-size: cover;
+}
