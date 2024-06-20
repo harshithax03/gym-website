@@ -2,7 +2,9 @@
     position: relative;
     padding: 2rem 2rem;
     display: flex;
-    gap: 5rem;
+    gap: 8rem;
+    justify-content: space-between;
+    align-items: center;
 }
 /* .hero-text{
     background-color: var(--purple);
@@ -12,12 +14,16 @@
 h2{
     margin: 0;
     font-size: 6rem;
-    font-weight: 900;
+    font-weight: 700;
     font-family: var(--inter);
+    margin-top: 2rem;
 }
-.gradient1, .gradient2{
-    height: 12rem;
-    width: 25rem;
+p{
+    width: 75%;
+}
+.gradient1, .gradient2, .gradient3, .gradient4{
+    height: 15rem;
+    width: 35rem;
     border-radius: 20rem;
     filter: blur(90px);
     position: absolute;
@@ -29,21 +35,55 @@ button{
     border-radius: 50px;
     padding: 0.5rem 2rem;
     font-size: 1.3rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .gradient1{
     background-color: var(--seaGreen);
-    top: 4rem;
+    top: 1rem;
+    left: 1rem;
+    width: 15rem;
 }
 .gradient2{
-    bottom: 4rem;
-    right: 2rem;
+    top: 20rem;
+    left: 50rem;
+    background-color: var(--purple);
+    z-index: -1;
+}
+.gradient3{
+    bottom: 5rem;
+    right: 5rem;
+    width: 30rem;
+    background-color: var(--seaGreen);
+}
+.gradient4{
+    top: 15rem;
+    right: 5rem;
     background-color: var(--purple);
 }
-.hero-img{
-    background-image: url("../../assets/images/1.png");
-    height: 30rem;
-    width: 50rem;
-    background-position: center;
+
+.img{
+    background-image: url("../../assets/images/main.png");
     background-size: cover;
+    background-position: center;
+    width: 38rem;
+    height: 36rem;
+    margin-right: 3rem;
+    position: relative;
+}
+.lines{
+    background-image: url("../../assets/images/lines.png");
+    background-size: cover;
+    background-position: center;
+    width: 38rem;
+    height: 36rem;
+    margin-right: 3rem;
+    position: absolute;
+    top: 4rem;
+    z-index: -1;
+}
+
+.hero-text h2 span{
+    background-color: #c7ec80;
+    border-radius:50px;
+    padding: 0.2rem 0.9rem;
 }

@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-// imgUrl:string = '../assets/images/hero-png' 
 }

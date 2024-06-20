@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import "@fortawesome/fontawesome-free/css/all.css";
 :root{
     --inter: "Inter" , "sans-serif";
     --poppins: "Poppins", "sans-serif";
     --purple: #ac9ce8;
-    --seaGreen: #bcec61;
+    --seaGreen: #e0f973;
     --white: #F5F5EB;
     --black : #191919;
     --grey : #838181;
