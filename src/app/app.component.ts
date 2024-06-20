@@ -11,5 +11,5 @@ import { HeroComponent } from './hero/hero.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'gym-website';
+  title = 'Gymate';
 }
