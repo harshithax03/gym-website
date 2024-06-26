@@ -1,0 +1,22 @@
+.choose-us{
+    padding: 4rem 2rem;
+}
+h1{
+
+    font-size: 2.25rem;
+    text-transform: capitalize;
+}
+.choose-us-info{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2.5rem 0rem;
+}
+.choose-us-info div{
+    background-color: var(--purple);
+    height: 20rem;
+    width: 25rem;
+    border-radius: 50px;
+    text-align: center;
+    padding: 1rem 2rem;
+}
