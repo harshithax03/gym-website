@@ -14,8 +14,7 @@ import { FormsModule } from '@angular/forms'
 })
 export class AppComponent {
   title = 'Calculator';
-  num1: number = 0;
-  num2: number = 0;
+
   result: number = 0;
 
   //funtion to return list of numbers
@@ -45,7 +44,10 @@ export class AppComponent {
   ];
   // inputs attributes
 
-
+  inputs = [
+    { value: 0 },
+    { value: 0 }
+  ];
   // result handling
   handleResult(result: number) {
     this.result = result

@@ -8,8 +8,7 @@
       *ngFor="let button of buttons"
       [btnName]="button.name"
       [formula] = "button.formula"
-      [num1]="inputs[0].value"
-      [num2]="inputs[1].value"
+     
       (onCalculate)="handleResult($event)"
     ></app-button>
   </div>
