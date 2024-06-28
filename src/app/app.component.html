@@ -1,9 +1,7 @@
 <div class="app">
   <div class="input-result">
-    <app-input *ngFor="let input of inputs; let i = index"
-                [type]="input.type"  [(inputValue)] = "input.value"/>
-    <!-- <input type="number" [(ngModel)]="num1" placeholder="enter number" class="input" />
-    <input type="number" [(ngModel)]="num2" placeholder="enter number" class="input" /> -->
+    <app-input *ngFor="let n of inputArray(15); let i = index"
+               />
   </div>
   <div class="buttons">
     <app-button
@@ -16,8 +14,8 @@
     ></app-button>
   </div>
   <div class="result">
-    <h2>Result👇</h2>
-    <p>{{result}}</p>
+    <!-- <h2>Result👇</h2> -->
+    <!-- <p>{{result}}</p> -->
   </div>
 
 </div>

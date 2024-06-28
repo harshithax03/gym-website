@@ -18,6 +18,10 @@ export class AppComponent {
   num2: number = 0;
   result: number = 0;
 
+  //funtion to return list of numbers
+  inputArray(n:number): number[] {
+    return Array(n)
+  }
 
   // button functionality
   buttons = [
@@ -40,16 +44,7 @@ export class AppComponent {
     
   ];
   // inputs attributes
-  inputs = [
-    {
-      type: "number",
-      value: this.num1
-    },
-    {
-      type: "number",
-      value: this.num2
-    },
-  ]
+
 
   // result handling
   handleResult(result: number) {
