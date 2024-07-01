@@ -4,6 +4,7 @@ import { ButtonComponent } from './button/button.component'
 import { InputComponent } from './input/input.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,6 +17,7 @@ export class AppComponent {
   title = 'Calculator';
 
   result: number = 0;
+  noOfInputs:number = 0;
 
   //funtion to return list of numbers
   inputArray(n:number): number[] {

@@ -1,16 +1,16 @@
 <div class="app">
   <div class="input-result">
-    <app-input *ngFor="let n of inputArray(15); let i = index"
+    <app-input *ngFor="let n of [noOfInputs]; let i = index"
                />
   </div>
   <div class="buttons">
-    <app-button
+    <!-- <app-button
       *ngFor="let button of buttons"
       [btnName]="button.name"
       [formula] = "button.formula"
      
       (onCalculate)="handleResult($event)"
-    ></app-button>
+    ></app-button> -->
   </div>
   <div class="result">
     <!-- <h2>Result👇</h2> -->
