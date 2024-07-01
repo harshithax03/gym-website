@@ -1,1 +1,23 @@
+<div class="app">
+<div class="container">
+  <div class="display">
 
+  </div>
+  <div class="clear-btns">
+    <div>Clear</div>
+    <div>AC</div>
+  </div>
+
+  <div class="num-cal-btns">
+  <div class="number-btns">
+    <div *ngFor = "let n of numbers(10); let i = index " > {{i}} </div>
+  </div>
+  <div class="calc-btns">
+    <p>+</p>
+    <p>-</p>
+    <p>*</p>
+    <p>/</p>
+</div>
+</div>
+</div>
+</div>
