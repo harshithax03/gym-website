@@ -4,7 +4,7 @@ import { ButtonComponent } from './button/button.component'
 import { InputComponent } from './input/input.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'
-
+import { environment } from '../environments/environment'
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,7 +14,6 @@ import { FormsModule } from '@angular/forms'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Calculator';
 
   result: number = 0;
   noOfInputs:number = 0;
@@ -23,7 +22,7 @@ export class AppComponent {
   inputArray(n:number): number[] {
     return Array(n)
   }
-
+  title = environment.inputCount;
   // button functionality
   buttons = [
     {
