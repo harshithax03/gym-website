@@ -10,19 +10,16 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
  title = 'Button'
- // button input
-// @Input() btnName : string = ''
-// @Input() formula : (a:number, b:number) => number = () =>0
-// @Input() num1 : number = 0
-// @Input() num2 : number = 0
-// @Output() onCalculate = new EventEmitter<number>()
-// calculate() {
-//     const result = this.formula(this.num1, this.num2) 
-//     this.onCalculate.emit(result);  
-// }
-  
 
+@Input() btnName : string = ''
+@Input() formula!: (values: number[]) => number;
+  @Input() inputValues: number[] = [];
+  @Output() onCalculate = new EventEmitter<number>();
 
+  calculate() {
+    const result = this.formula(this.inputValues);
+    this.onCalculate.emit(result);
+  }
 
 
 

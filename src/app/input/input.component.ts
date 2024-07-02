@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './input.component.css'
 })
 export class InputComponent {
- @Input() type : string = ''
+ @Input() type : number = 0
  @Input() inputValue : number = 0
  @Output() inputValueChange = new EventEmitter<number>();
  onValueChange(event: any) {

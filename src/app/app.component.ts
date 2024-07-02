@@ -14,41 +14,41 @@ import { environment } from '../environments/environment'
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+  input:number = environment.inputCount;
   result: number = 0;
   noOfInputs:number = 0;
-
-  //funtion to return list of numbers
-  inputArray(n:number): number[] {
-    return Array(n)
-  }
-  title = environment.inputCount;
+  inputValues: number[] = Array(this.input).fill(0);
   // button functionality
+
   buttons = [
     {
       name: 'Add',
-      formula: (a: number, b: number) => a + b
+      formula: (values: number[]) => values.reduce((acc, curr) => acc + curr, 0)
     },
     {
       name: 'Subtract',
-      formula: (a: number, b: number) => a - b
+      formula: (values: number[]) => values.reduce((acc, curr) => acc - curr)
     },
     {
       name: 'Multiply',
-      formula: (a: number, b: number) => a * b
+      formula: (values: number[]) => values.reduce((acc, curr) => acc * curr, 1)
     },
     {
       name: 'Divide',
-      formula: (a: number, b: number) => a / b
+      formula: (values: number[]) => values.reduce((acc, curr) => acc / curr)
     },
-    
   ];
+
   // inputs attributes
 
-  inputs = [
-    { value: 0 },
-    { value: 0 }
-  ];
+  updateInputValue(value: number, index: number) {
+    this.inputValues[index] = value;
+  }
+
+  // Perform calculation based on button formula
+  calculate(formula: (values: number[]) => number) {
+    this.result = formula(this.inputValues);
+  }
   // result handling
   handleResult(result: number) {
     this.result = result
