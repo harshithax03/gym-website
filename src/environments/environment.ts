@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    inputCount: 2,
+    inputCount: 8,
 };

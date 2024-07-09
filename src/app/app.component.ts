@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonComponent } from './button/button.component'
 import { InputComponent } from './input/input.component';
@@ -11,13 +11,18 @@ import { environment } from '../environments/environment'
   imports: [RouterOutlet, ButtonComponent, CommonModule,
             FormsModule,InputComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  changeDetection : ChangeDetectionStrategy.OnPush
+
 })
 export class AppComponent {
-  input:number = environment.inputCount;
+  private input:number = environment.inputCount;
   result: number = 0;
   noOfInputs:number = 0;
   inputValues: number[] = Array(this.input).fill(0);
+  // data = names
+  // name!: string
+ 
   // button functionality
 
   buttons = [
@@ -42,7 +47,9 @@ export class AppComponent {
   // inputs attributes
 
   updateInputValue(value: number, index: number) {
+    // console.log(value, index);
     this.inputValues[index] = value;
+    console.log(this.inputValues)
   }
 
   // Perform calculation based on button formula

@@ -1,10 +1,9 @@
 <div class="app">
   <div class="input-result">
-    <app-input *ngFor="let n of  inputValues ;  let i = index"
-    [(inputValue)]="inputValues[i]"
+    <app-input *ngFor="let n of  inputValues ;  let i = index;"
+    [inputValue]= 'n'
     (inputValueChange)="updateInputValue($event, i)"
-               />
-               
+    />       
   </div>
   <div class="buttons">
     <app-button
@@ -19,5 +18,4 @@
     <h2>Result👇</h2>
     <p>{{result}}</p>
   </div>
-
 </div>

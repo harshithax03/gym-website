@@ -1,4 +1,4 @@
-import { Component, Input, Output,EventEmitter } from '@angular/core';
+import { Component, Input, Output,EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.css'
+  styleUrl: './input.component.css',
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class InputComponent {
  @Input() type : string = 'number'
  @Input() inputValue : number = 0
  @Output() inputValueChange = new EventEmitter<number>();
- onValueChange(event: any) {
+ onValueChange(event: string) {
   this.inputValueChange.emit(Number(event));
+  console.log(event)
 }
 }
