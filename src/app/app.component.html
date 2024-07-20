@@ -1,17 +1,15 @@
 <div class="app">
   <div class="input-result">
-    <app-input *ngFor="let input of inputs; let i = index"
-                [type]="input.type"  [(inputValue)] = "input.value"/>
-    <!-- <input type="number" [(ngModel)]="num1" placeholder="enter number" class="input" />
-    <input type="number" [(ngModel)]="num2" placeholder="enter number" class="input" /> -->
+    <app-input *ngFor="let n of numSequence(15); let i = index"
+    (inputValueChange)="onValueChange(i, $event)"/>
   </div>
   <div class="buttons">
     <app-button
       *ngFor="let button of buttons"
       [btnName]="button.name"
       [formula] = "button.formula"
-      [num1]="inputs[0].value"
-      [num2]="inputs[1].value"
+      [inputValues] = 'inputValues'
+     
       (onCalculate)="handleResult($event)"
     ></app-button>
   </div>
@@ -21,3 +19,5 @@
   </div>
 
 </div>
+<!-- [num1]="inputs[0].value" -->
+<!-- [num2]="inputs[1].value" -->
